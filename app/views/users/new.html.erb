@@ -1,0 +1,24 @@
+<div class="register-form">
+<%= form_for @user, controller: 'users', action: 'create' do |f| %>
+<h1>Signup!</h1>
+  <div class="register-form-input">
+  <%= f.text_field :first_name, :placeholder => "First Name" %>
+  </div>
+  <div class="register-form-input">
+  <%= f.text_field :last_name, :placeholder => "Last Name"  %>
+  </div>
+  <div class="register-form-input">
+  <%= f.password_field :password, :placeholder => "Password"  %>
+  </div>
+  <div class="register-form-input">
+  <%= f.text_field :email, :placeholder => "Email"  %>
+  </div>
+  <div class="register-form-input">
+  <%= f.number_field :height, :placeholder => "Height in Inches"  %>
+  </div>
+  <div class="register-form-input">
+  <%= f.text_field :weight, :placeholder => "Weight in Pounds" %>
+  </div>
+  <%= f.submit "Create User", :class => "register-form-button"%>
+<% end %>
+</div>
