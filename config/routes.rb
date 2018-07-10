@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #Initial app landing page ==> meal-app.com/
+  root 'welcome#welcome'
+
+  #Login Routes
+  post '/signin', to: 'sessions#create'
+  #Logout Routes
+  delete '/logout', to: 'sessions#destroy'
+
+  resources :users
 end
