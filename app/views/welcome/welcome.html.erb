@@ -1,8 +1,13 @@
-  <%= form_for(:session, url: signin_path) do |f| %>
-          <%= f.text_field :email, :placeholder => "Email" %>
-          <br></br>
-          <%= f.password_field :password, :placeholder => "Password"%>
-          <br></br>
-          <%= f.submit "Login", :class => "login-button"%>
-      <% end %>
+<div class="wrapper">
+  <div class="form-signin">
+    <h2 class="log-in-form-heading">Please Sign In </h2>
+    <%= form_for(:session, url: signin_path, :html => {:class => 'form-control'})do |f| %>
+            <%= f.text_field :email, :placeholder => "Email" %>
+            <br></br>
+            <%= f.password_field :password, :placeholder => "Password"%>
+            <br></br>
+            <%= f.submit "Login", :class => "login-button"%>
+            <% end %>
       <p class="message">Not registered? <%= link_to "Sign Up!", new_user_path %></p>
+  </div>
+</div>
