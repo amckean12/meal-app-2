@@ -7,6 +7,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     if @recipe.save
+      binding.pry
       redirect_to recipe_path(@recipe)
     else
       redirect_to new_recipe_path
@@ -20,7 +21,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:name, :calories, :carbs, :protein, :fats)
+    params.require(:recipe).permit(:name, :description, :calories, :carbs, :protein, :fats)
   end
 
 end
