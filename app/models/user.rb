@@ -1,11 +1,21 @@
 class User < ApplicationRecord
   #User Validations
-  validates :first_name, :last_name, presence: true
-  validates :email, presence: true
-  validates :password, presence: true
-  validates :height, presence: true
-  validates :weight, presence: true
-  validates :email, :uniqueness => { :case_sensitive => false }
+  validates :first_name, :last_name, :presence => {:message => "Must have First Name"}
+  validates :email, presence: {:message => "Must have Last Name"}
+  validates :password, presence: {:message => "Must have password"}
+  validates :height, presence: {:message => "Must have height"}
+  validates :weight, presence: {:message => "Must have weight"}
+  validates :email, :uniqueness => { :case_sensitive => false, :message => "Email already in use"}
+  # --- End User Validations ---
+
+  has_many :recipes
+  has_many :meals
+
+
 
   has_secure_password
+
+
+
+
 end

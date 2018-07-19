@@ -1,8 +1,4 @@
-<div class="welcome-page-aka-login">
-  <div class="form">
-    <form class="login-form">
-      <h1>Menu Login</h1>
-      <%= form_for @user, :url => url_for(:controller => 'sessions', :action => 'create') do |f| %>
+  <%= form_for(:session, url: signin_path) do |f| %>
           <%= f.text_field :email, :placeholder => "Email" %>
           <br></br>
           <%= f.password_field :password, :placeholder => "Password"%>
@@ -10,6 +6,3 @@
           <%= f.submit "Login", :class => "login-button"%>
       <% end %>
       <p class="message">Not registered? <%= link_to "Sign Up!", new_user_path %></p>
-    </form>
-  </div>
-</div>

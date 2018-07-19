@@ -9,6 +9,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :uid
       t.integer :weight
       t.integer :height
+      t.integer :daily_calories
       t.timestamps
     end
   end

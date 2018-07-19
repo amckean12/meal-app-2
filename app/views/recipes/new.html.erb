@@ -1,0 +1,24 @@
+<h1>Make Your Recipe!</h1>
+                <%= form_for @recipe, controller: 'recipes', action: 'create' do |f| %>
+                <div class="form-group">
+                  <%= f.label :name %>
+                  <%= f.text_field :name%>
+                </div>
+                <div class="form-group">
+                  <%= f.label :calories %>
+                  <%= f.number_field :calories %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :carbs %>
+                  <%= f.number_field :carbs%>
+                </div>
+                <div class="form-group">
+                  <%= f.label :protein %>
+                  <%= f.number_field :protein %>
+                </div>
+                <div class="form-group">
+                  <%= f.label :fat %>
+                  <%= f.number_field :fats %>
+                </div>
+                  <%= f.submit "Create Recipe" %>
+                <% end %>
