@@ -1,1 +1,34 @@
-<%= @recipes.name.all %>
+<h1>Meals</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><strong>Name</strong></td>
+      <td><strong>Description</strong></td>
+      <td><strong>Calories</strong></td>
+      <td><strong>Carbs</strong></td>
+      <td><strong>Protein</strong></td>
+      <td><strong>Fats</strong></td>
+      <td><strong>Created By</strong></td>
+    </tr>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
+        <td><%= recipe.calories %></td>
+        <td><%= recipe.carbs %></td>
+        <td><%= recipe.protein %></td>
+        <td><%= recipe.fats %></td>
+        <td><%= %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>

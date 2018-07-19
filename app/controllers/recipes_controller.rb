@@ -7,7 +7,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.create(recipe_params)
     if @recipe.save
-      binding.pry
       redirect_to recipe_path(@recipe)
     else
       redirect_to new_recipe_path

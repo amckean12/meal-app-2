@@ -1,5 +1,4 @@
-class Meals < ApplicationRecord
-  belongs_to :user
+class Meals < ActiveRecord::Base
   belongs_to :recipe
-
+  belongs_to :user
 end
